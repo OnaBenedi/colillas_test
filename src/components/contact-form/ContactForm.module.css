@@ -1,0 +1,170 @@
+.contactForm {
+  display: flex;
+  padding: 5%;
+  & .contactFormLeft {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    & .contactFormSubtitle {
+      color: red;
+      margin: 0;
+      font-size: 1.7vw;
+    }
+    & .contactFormTitle {
+      font-size: 2.7vw;
+      margin: 0;
+      font-weight: 600;
+      line-height: 1;
+    }
+  }
+  & .contactFormRight {
+    display: grid;
+    width: 50%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-left: 3%;
+    & span {
+      display: flex;
+      flex-direction: column;
+      & label {
+        font-size: 1vw;
+      }
+      & input,
+      .messageArea {
+        border-radius: 30px;
+        border: 1px solid darkgrey;
+        margin: 2% 5% 2% 0;
+        height: 5vh;
+        font-size: 1vw;
+        padding: 2%;
+      }
+    }
+    & .messageSpan {
+      grid-column: span 2;
+      grid-row: span 3;
+      & .messageArea {
+        height: 100%;
+        width: 93%;
+      }
+    }
+    & .termsSpan {
+      flex-direction: row;
+      align-items: center;
+      grid-column: span 2;
+      & input {
+        height: 3vh;
+        margin: 0 1% 0 0;
+        width: 2vw;
+      }
+      & label {
+        & a {
+          color: black;
+          font-weight: normal;
+          text-decoration: underline;
+        }
+      }
+    }
+    & button {
+      background-color: black;
+      color: white;
+      height: 55%;
+      width: 42%;
+      font-size: 2.6vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 30px;
+      font-weight: 400;
+      & img {
+        filter: invert(98%) sepia(3%) saturate(7%) hue-rotate(150deg)
+          brightness(113%) contrast(100%);
+        margin-left: 5%;
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .contactForm {
+    & .contactFormRight {
+      & button {
+        width: 48%;
+        gap: 18%;
+        border-radius: 36px;
+        & img {
+          height: 2vh;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .contactForm {
+    padding: 7% 5% 7% 9%;
+    flex-direction: column;
+    & .contactFormLeft {
+      width: 100%;
+      & .contactFormSubtitle {
+        font-size: 1.8vw;
+      }
+      & .contactFormTitle {
+        font-size: 3.7vw;
+        margin-bottom: 5%;
+      }
+    }
+    & .contactFormRight {
+      width: 100%;
+      margin: 0;
+      & span {
+        & label {
+          font-size: 1.5vw;
+        }
+        & input,
+        .messageArea {
+          height: 4vh;
+        }
+      }
+      & button {
+        justify-self: center;
+        grid-column: span 2;
+        width: 22%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contactForm {
+    & .contactFormLeft {
+      & .contactFormSubtitle {
+        font-size: 2vw;
+      }
+      & .contactFormTitle {
+        font-size: 4vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .contactForm {
+    & .contactFormLeft {
+      & .contactFormSubtitle {
+        font-size: 3.5vw;
+      }
+      & .contactFormTitle {
+        font-size: 4.5vw;
+      }
+    }
+    & .contactFormRight {
+      & span {
+        & label {
+          font-size: 3vw;
+        }
+      }
+      & button {
+        width: 42%;
+      }
+    }
+  }
+}

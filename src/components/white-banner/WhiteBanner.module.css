@@ -1,0 +1,19 @@
+.whiteBanner {
+    display: flex;
+    gap: 2%;
+    padding: 5%;
+}
+
+@media (max-width: 768px){
+    .whiteBanner {
+        padding: 7% 9%;
+    }
+}
+
+
+@media (max-width: 425px){
+    .whiteBanner{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

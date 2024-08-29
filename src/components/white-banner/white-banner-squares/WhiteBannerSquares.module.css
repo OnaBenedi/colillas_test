@@ -1,0 +1,42 @@
+ .whiteBannerSquare {
+    width: 25%;
+
+    & img{
+        width: 20%;
+    }
+    & .whiteBannerTitle{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2.7vw;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    & .whiteBannerText{
+        font-size: 1vw;
+        color: lightslategray;
+    }
+  }
+
+@media(max-width: 768px){
+    .whiteBannerSquare{
+        & .whiteBannerTitle{
+            font-weight: 700;
+        }
+        & .whiteBannerText{
+            font-size: 1.75vw ;
+        }
+    }
+}
+
+
+@media (max-width: 425px){
+  .whiteBannerSquare{
+        width: 100%;
+        & .whiteBannerTitle{
+            font-size: 4.2vw;
+        }
+        & .whiteBannerText{
+            font-size: 2.75vw ;
+        }
+    }
+
+}

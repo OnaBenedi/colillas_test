@@ -1,0 +1,122 @@
+.mainBanner {
+  background-image: linear-gradient(black, black),
+    url("../../assets/leone-venter-VieM9BdZKFo-unsplash.jpg");
+  background-size: 100%;
+  background-blend-mode: saturation;
+  background-position: 0 -78px;
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5%;
+  filter: brightness(105%);
+  & img {
+    height: 5vh;
+    width: 15vw;
+  }
+  & .firstText {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 3vw;
+    width: 70%;
+    line-height: 1;
+  }
+  & .mainBannerText {
+    width: 65%;
+    & .mainBannerTitle {
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 1vw;
+      font-family: Arial, Helvetica, sans-serif;
+      border-bottom: 2px solid black;
+      margin-bottom: 0;
+      padding-bottom: 1%;
+      width: 85%;
+      text-indent: 2%;
+    }
+    & div {
+      display: flex;
+      border-bottom: 2px solid black;
+      width: 85%;
+      gap: 4vw;
+      & p {
+        width: 80%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2.2vw;
+        margin: 2%;
+        line-height: 1;
+      }
+      & img {
+        margin-top: 3%;
+        width: 5%;
+        height: 3vh;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .mainBanner {
+    background-size: 175%;
+    background-position: -290px -78px;
+    background-repeat: repeat;
+    padding: 9%;
+    & img{
+      width: 27vw;
+    }
+    & .firstText {
+      width: 50%;
+      font-size: 4.5vw;
+    }
+    & .mainBannerText {
+      width: 85%;
+      & .mainBannerTitle {
+        font-size: 1.5vw;
+      }
+      & div {
+        & p {
+          font-size: 2.6vw;
+        }
+        & img {
+          margin-top: 3%;
+          width: 5%;
+          height: 3vh;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px){
+  .mainBanner {
+    height: 100%;
+    & img {
+      height: 5vh;
+      width: 42vw;
+    }
+    & .firstText {
+      font-size: 4vw;
+    }
+    & .mainBannerText {
+      width: 75%;
+      & .mainBannerTitle {
+        font-size: 3vw;
+      }
+      & div {
+
+        & p {
+          font-size: 3.2vw;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 320px){
+  .mainBanner{
+    width: 100%;
+  }
+}

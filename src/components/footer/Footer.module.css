@@ -1,0 +1,140 @@
+.footer {
+  background-color: rgb(56, 58, 59);
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  justify-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 4% 15%;
+  padding-bottom: 0;
+  & .footerTop {
+    width: 27%;
+    margin-bottom: 2%;
+    height: 18vh;
+    & .footerTopTitle {
+      font-weight: 700;
+      font-size: 1.2vw;
+      margin-bottom: 0;
+    }
+    & .footerTopText {
+      font-size: 0.9vw;
+    }
+    & .footerTopMail {
+      font-size: 0.8vw;
+    }
+  }
+  & .mediaLinks {
+    grid-column-end: span 2;
+    display: flex;
+    gap: 6%;
+    height: 3vh;
+    margin: 9vh 2vw 0 0;
+    & a {
+      & img {
+        height: 100%;
+        filter: invert(98%) sepia(3%) saturate(7%) hue-rotate(150deg)
+          brightness(113%) contrast(100%);
+      }
+    }
+  }
+  & .bottomLinks {
+    grid-column-end: span 2;
+    display: flex;
+    align-items: center;
+    gap: 4%;
+    width: 100%;
+    height: 40%;
+    font-size: 1.5vh;
+    margin-top: 3vh;
+    justify-content: center;
+    & a {
+      color: white;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    & .mediaLinks {
+      margin: 3vh 2vw 0 0;
+    }
+    & .bottomLinks {
+      font-size: 2vh;
+    }
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .footer {
+    height: 45vh;
+    & .footerTop {
+      width: 34%;
+      & .footerTopTitle {
+        font-size: 1.8vh;
+      }
+      & .footerTopText {
+        font-size: 1.3vw;
+      }
+      & .footerTopMail {
+        font-size: 1.2vw;
+      }
+    }
+    & .mediaLinks {
+      margin: 3vh 2vw 0 0;
+    }
+
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+  & .footerTop {
+    width: 50%;
+    & .footerTopTitle {
+      font-size: 2.2vw;
+    }
+    & .footerTopText {
+      font-size: 1.8vw;
+    }
+    & .footerTopMail {
+      font-size: 1.6vw;
+    }
+  }
+  & .bottomLinks {
+    margin-top: 0;
+  }
+
+}
+}
+
+@media (max-width: 425px){
+  .footer {
+
+    & .footerTop {
+      width: 100%;
+      & .footerTopTitle {
+        font-size: 3.2vw;
+      }
+      & .footerTopText {
+        font-size:2.5vw;
+      }
+      & .footerTopMail {
+        font-size: 2vw;
+        margin-bottom: 0;
+      }
+    }
+    & .mediaLinks{
+      margin: 0;
+    }
+    & .bottomLinks {
+      grid-column-end: span 2;
+      display: grid;
+     grid-template-columns: 1fr 1fr;
+      & a {
+        color: white;
+      }
+    }
+  }
+}
